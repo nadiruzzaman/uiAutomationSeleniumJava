@@ -16,4 +16,9 @@ public class ValidLoginTest extends ScriptBase {
 
     }
 
+    @Test
+    public void verifyValidSignIn(){
+        login=new Login(driver);
+        login.validLogin(driver,"email","test321@test.com","passwd","Admin123");
+    }
 }
