@@ -9,6 +9,16 @@
                     <include name="verifyValidSignIn"/>
                 </methods>
             </class>
+            <class name="cartPageTest.ValidCartPageTest">
+                <methods>
+                    <include name="verifyCartButtonAvailableInHomePage"/>
+                    <include name="verifyCartButtonAvailableInSpecialsPgae"/>
+                    <include name="verifyCartButtonAvailableInNewProductsPgae"/>
+                    <include name="verifyCartButtonAvailableInBestSellersPgae"/>
+                    <include name="verifyCartButtonAvailableInOurStoresPgae"/>
+                    <include name="verifyCartButtonAvailableInContactUsPgae"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

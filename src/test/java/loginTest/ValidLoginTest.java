@@ -8,7 +8,7 @@ public class ValidLoginTest extends ScriptBase {
 
     Login login;
 
-    @Test
+    @Test (priority = 1)
     public void verifySignInTabDisplayed(){
         login=new Login(driver);
         login.signInTabDisplay();
@@ -16,7 +16,7 @@ public class ValidLoginTest extends ScriptBase {
 
     }
 
-    @Test
+    @Test (priority = 2)
     public void verifyValidSignIn(){
         login=new Login(driver);
         login.validLogin(driver,"email","test321@test.com","passwd","Admin123");
