@@ -26,9 +26,11 @@ public class Login {
         driver.findElement(By.id(""+id+"")).sendKeys(emailIdOrPass);
     }
     public void universalIdClick(WebDriver driver,String id){
+
         driver.findElement(By.id(""+id+"")).click();
     }
     public void universalIdDisplay(WebDriver driver,String id){
+
         driver.findElement(By.id(""+id+"")).isDisplayed();
     }
 
