@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CartPage {
-    @FindBy(xpath = "//a[@title='View my shopping cart']")  WebElement cartButton;
+    @FindBy(xpath = "//a/b[@title='View my shopping cart']")  WebElement cartButton;
 
     public CartPage(WebDriver driver){
 

@@ -14,6 +14,9 @@ import org.testng.annotations.Parameters;
 
 public class ScriptBase {
 public static WebDriver driver;
+public WebDriver getDriver(){
+    return driver;
+}
 
     @Parameters({"browser"})
     @BeforeTest

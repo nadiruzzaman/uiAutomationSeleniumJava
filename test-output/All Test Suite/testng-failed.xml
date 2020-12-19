@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <listeners>
+    <listener class-name="listener.Listener"/>
+  </listeners>
   <test thread-count="5" name="/Users/nadiruzzamanmuhammad/Documents/uiAutomationSeleniumJava(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="loginTest.ValidLoginTest">
+      <class name="cartPageTest.ValidCartPageTest">
         <methods>
-          <include name="verifySignInTabDisplayed"/>
+          <include name="verifyCartButtonAvailableInNewProductsPgae"/>
+          <include name="verifyCartButtonAvailableInBestSellersPgae"/>
           <include name="afterTest"/>
+          <include name="verifyCartButtonAvailableInHomePage"/>
+          <include name="verifyCartButtonAvailableInContactUsPgae"/>
+          <include name="verifyCartButtonAvailableInOurStoresPgae"/>
+          <include name="verifyCartButtonAvailableInSpecialsPgae"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- loginTest.ValidLoginTest -->
+      </class> <!-- cartPageTest.ValidCartPageTest -->
     </classes>
   </test> <!-- /Users/nadiruzzamanmuhammad/Documents/uiAutomationSeleniumJava(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
