@@ -4,7 +4,7 @@ import base.ScriptBase;
 import controller.Login;
 import org.testng.annotations.Test;
 
-public class ValidLoginTest extends ScriptBase {
+public class ValidLoginTest extends ScriptBase  {
 
     Login login;
 

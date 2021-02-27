@@ -8,13 +8,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-
 public class ScriptBase {
 public static WebDriver driver;
-public WebDriver getDriver(){
+
+public WebDriver getDriver() {
     return driver;
 }
 
@@ -24,11 +25,12 @@ public WebDriver getDriver(){
         if(browser.equalsIgnoreCase("chrome")){
             ChromeOptions chromeOptions=new ChromeOptions();
             chromeOptions.addArguments("--start-fullscreen");
-            //System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver");
+           // System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver");
             WebDriverManager.chromedriver().setup();
             driver=new ChromeDriver(chromeOptions);
 
         }else if(browser.equalsIgnoreCase("safari")){
+
             System.setProperty("webdriver.safari.noinstall","true");
             driver=new SafariDriver();
             driver.manage().window().maximize();
@@ -40,18 +42,18 @@ public WebDriver getDriver(){
             driver.manage().window().maximize();
 
         }else if(browser.equalsIgnoreCase("opera")){
-            //System.setProperty("webdriver.gecko.driver","./drivers/geckodriver");
             WebDriverManager.operadriver().setup();
             driver=new OperaDriver();
             driver.manage().window().maximize();
 
         }
+
         driver.get("http://automationpractice.com/index.php");
     }
 
     @AfterTest
     public void afterTest(){
-        //driver.quit();
+        driver.quit();
     }
 
 }

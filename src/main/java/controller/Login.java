@@ -1,12 +1,13 @@
 package controller;
 
+import base.ScriptBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login {
+public class Login extends ScriptBase  {
 
 
  @FindBy(xpath = "//a[@title='Log in to your customer account']")  WebElement signInTab;
@@ -26,23 +27,20 @@ public class Login {
         driver.findElement(By.id(""+id+"")).sendKeys(emailIdOrPass);
     }
     public void universalIdClick(WebDriver driver,String id){
-
         driver.findElement(By.id(""+id+"")).click();
     }
     public void universalIdDisplay(WebDriver driver,String id){
-
         driver.findElement(By.id(""+id+"")).isDisplayed();
     }
 
-    public void validLogin(WebDriver driver,String userId,String email,String passId,String Password){
+    public  void validLogin(WebDriver driver,String userId,String email,String passId,String Password){
         signInTab.click();
         universalIdSendKey(driver,userId,email);
         universalIdSendKey(driver,passId,Password);
-
-        loginSubmit.click();
-
+       loginSubmit.click();
 
     }
+
 
 
 }

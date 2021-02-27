@@ -19,6 +19,14 @@
           <include name="beforeTest"/>
         </methods>
       </class> <!-- cartPageTest.ValidCartPageTest -->
+      <class name="loginTest.ValidLoginTest">
+        <methods>
+          <include name="verifyValidSignIn"/>
+          <include name="verifySignInTabDisplayed"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- loginTest.ValidLoginTest -->
     </classes>
   </test> <!-- /Users/nadiruzzamanmuhammad/Documents/uiAutomationSeleniumJava(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

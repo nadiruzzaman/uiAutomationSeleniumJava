@@ -18,6 +18,7 @@ public class Listener extends ScriptBase implements ITestListener {
 
     public void onTestStart(ITestResult result) {
         //System.out.println("My Test Starting now");
+
         Reporter.log("Test  start: "+result.getMethod().getMethodName());
 
     }
@@ -61,7 +62,7 @@ public class Listener extends ScriptBase implements ITestListener {
 
         }
 
-
+        Reporter.log("Test  failed: "+result.getMethod().getMethodName());
 
 
     }
